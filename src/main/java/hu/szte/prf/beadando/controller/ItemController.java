@@ -19,7 +19,10 @@ import hu.szte.prf.beadando.services.ItemService;
 @RequestMapping
 @CrossOrigin(origins = "*")
 public class ItemController {
-    
+    @GetMapping("/")
+    public String helloWorld() {
+        return "Hello World!";
+    }
     ItemService itemService;
     @Autowired
     public ItemController(ItemService itemService) {
